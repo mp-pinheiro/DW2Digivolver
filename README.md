@@ -15,7 +15,7 @@ All the DNA tables were extracted from Froste's DNA Digivolution Guide, which ca
 DW2 Digivolver is run via the JAVA VIRTUAL MACHINE, you can download the JAVA JRM here: http://java.com/en/download/.
 
 * #### Download
-The last version of the DW2 Digivolver can be download at: SOURCEFOURGE
+The last version of the DW2 Digivolver can be download at: https://sourceforge.net/projects/dw2-digivolver/files/
 
 ## Compiling
 DW2 Digivolver is an ECLIPSE based JAVA Project. You can easily import it and compile it via the IDE.
