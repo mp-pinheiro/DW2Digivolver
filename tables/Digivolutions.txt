@@ -1,0 +1,358 @@
+Betamon
+DTyrannomon 0
+Darkrizamon 3
+Tuskmon 6
+DemiDevimon
+IceDevimon 0
+Devimon 4
+Dokunemon
+Flymon 0
+Gazimon
+Nanimon 0
+Gizamon
+Cyclonemon 0
+Deltamon 3
+Devidramon 6
+Goburimon
+Ogremon 0
+Hagurumon
+Numemon 0
+Sukamon 1
+PSukamon 2
+Raremon 4
+Guardromon 6
+Kunemon
+Kuwagamon 0
+Mushroomon
+Vegiemon 0
+RedVegiemon 1
+Woodmon 4
+Otamamon
+Gekomon 0
+Octomon 3
+SnowGoburimon
+Hyogamon 0
+Syakomon
+Octomon 0
+Gesomon 3
+Tsukaimon
+Bakemon 0
+Soulmon 3
+Bakemon
+Phantomon 0
+Cyclonemon
+Megadramon 0
+Darkrizamon
+ExTyrannomon 0
+DTyrannomon
+ExTyrannomon 0
+MTyrannomon 6
+Deltamon
+Megadramon 0
+Gigadramon 6
+Devidramon
+Gigadramon 0
+Devimon
+Myotismon 0
+Flymon
+Okuwamon 0
+Gekomon
+ShogunGekomon 0
+Gesomon
+MarineDevimon 0
+WaruSeadramon 6
+Guardromon
+Vademon 0
+Garbagemon 6
+Datamon 9
+Hyogamon
+WaruMonzaemon 0
+IceDevimon
+Myotismon 0
+Kuwagamon
+Okuwamon 0
+Nanimon
+Tekkamon 0
+Octomon
+Dragomon 0
+Ogremon
+Etemon 0
+PSukamon
+Vademon 0
+Raremon
+Vademon 0
+Garbagemon 5
+RedVegiemon
+Cherrymon 0
+Soulmon
+Phantomon 0
+Tuskmon
+MTyrannomon 0
+Vegiemon
+Cherrymon 0
+Woodmon
+Cherrymon 0
+Cherrymon
+Puppetmon 0
+Dragomon
+Pukumon 0
+Etemon
+MetalEtemon 0
+MarineDevimon
+Pukumon 0
+Myotismon
+VMyotismon 0
+Okuwamon
+GranKuwagamon 0
+Diaboromon 20
+Phantomon
+Pierrotmon 0
+ShogunGekomon
+Pukumon 0
+SkullGreymon
+Machinedramon 0
+Tekkamon
+Pierrotmon 0
+WaruMonzaemon
+MetalEtemon 0
+WaruSeadramon
+Pukumon 0
+Candlemon
+Tankmon 0
+Meramon 3
+Clockmon 6
+Crabmon
+Coelamon 0
+MoriShellmon 3
+Shellmon 6
+Seadramon 8
+Elecmon
+Tyrannomon 0
+Flarerizamon 3
+Monochromon 6
+Floramon
+Kiwimon 0
+Kokatorimon 3
+Akatorimon 6
+Gabumon
+Centarumon 0
+Drimogemon 3
+NDrimogemon 6
+Garurumon 8
+Gotsumon
+Icemon 0
+MudFrigimon 3
+JMojyamon 6
+Palmon
+Togemon 0
+Patamon
+Ninjamon 0
+Starmon 3
+Wizardmon 6
+Angemon 8
+Akatorimon
+Piximon 0
+Centarumon
+Meteormon 0
+Clockmon
+Tinmon 0
+SkullMeramon 8
+Coelamon
+MegaSeadramon 0
+Drimogemon
+Meteormon 0
+Flarerizamon
+Triceramon 0
+Vermilimon 6
+Icemon
+Meteormon 0
+JMojyamon
+Meteormon 0
+Kiwimon
+Deramon 0
+Kokatorimon
+Deramon 0
+Piximon 6
+Meramon
+BlueMeramon 0
+SkullMeramon 6
+Monochromon
+Vermilimon 0
+MoriShellmon
+Scorpiomon 0
+MudFrigimon
+Meteormon 0
+Ninjamon
+Mamemon 0
+NDrimogemon
+Meteormon 0
+Seadramon
+MegaSeadramon 0
+Shellmon
+Scorpiomon 0
+Starmon
+Mamemon 0
+MetalMamemon 6
+Digitamamon 8
+Tankmon
+Tinmon 0
+SkullMeramon 6
+Togemon
+Pumpkinmon 0
+Blossomon 6
+Lillymon 8
+Tyrannomon
+Triceramon 0
+MTyrannomon 8
+Wizardmon
+Digitamamon 0
+Yanmamon
+Pumpkinmon 0
+Blossomon
+Rosemon 0
+BlueMeramon
+Boltmon 0
+Deramon
+Gryphonmon 0
+Digitamamon
+SaberLeomon 0
+Lillymon
+Rosemon 0
+Mamemon
+PMamemon 0
+MegaSeadramon
+MSeadramon 0
+MetalMamemon
+PMamemon 0
+SaberLeomon 9
+Meteormon
+MGarurumon 0
+Baihumon 20
+Piximon
+Gryphonmon 0
+Pumpkinmon
+Rosemon 0
+Scorpiomon
+Preciomon 0
+SkullMeramon
+Boltmon 0
+Tinmon
+Boltmon 0
+Agumon
+Greymon 0
+Biyomon
+Airdramon 0
+Veedramon 3
+Saberdramon 6
+Birdramon 8
+ClearAgumon
+Angemon 0
+Piddomon 3
+Gomamon
+Tortomon 0
+Ikkakumon 3
+Penguinmon
+Ikkakumon 0
+Dolphmon 3
+SnowAgumon
+Frigimon 0
+Mojyamon 3
+Gururumon 6
+Tapirmon
+Unimon 0
+ShimaUnimon 3
+Garurumon 6
+Apemon 8
+Tentomon
+Kabuterimon 0
+ToyAgumon
+Leomon 0
+Gatomon 3
+Veemon
+Veedramon 0
+Flamedramon 4
+Airdramon
+AeroVeedramon 0
+Angemon
+Andromon 0
+MagnaAngemon 6
+Apemon
+Mammothmon 0
+Birdramon
+Garudamon 0
+Dolphmon
+Whamon 0
+Flamedramon
+AeroVeedramon 0
+Raidramon 6
+Frigimon
+Monzaemon 0
+Garurumon
+WereGarurumon 0
+Gatomon
+Angewomon 0
+Greymon
+MetalGreymon 0
+MTyrannomon 6
+SkullGreymon 9
+Gururumon
+WereGarurumon 0
+Ikkakumon
+Whamon 0
+Zudomon 6
+Kabuterimon
+MKabuterimon 0
+Leomon
+Panjyamon 0
+Mojyamon
+Monzaemon 0
+Piddomon
+MagnaAngemon 0
+Giromon 6
+Saberdramon
+Garudamon 0
+ShimaUnimon
+Mammothmon 0
+Tortomon
+Zudomon 0
+Unimon
+Mammothmon 0
+Veedramon
+AeroVeedramon 0
+AeroVeedramon
+Phoenixmon 0
+Andromon
+Seraphimon 0
+Angewomon
+Magnadramon 0
+Garudamon
+Phoenixmon 0
+Giromon
+Seraphimon 0
+MagnaAngemon
+Seraphimon 0
+Mammothmon
+SMammothmon 0
+MTyrannomon
+WarGreymon 0
+MKabuterimon
+HKabuterimon 0
+MetalGreymon
+WarGreymon 0
+Omnimon 20
+Monzaemon
+Jijimon 0
+Panjyamon
+SaberLeomon 0
+Magnadramon 9
+Raidramon
+Phoenixmon 0
+Idramon 8
+WereGarurumon
+SMammothmon 0
+MGarurumon 8
+Whamon
+MarineAngemon 0
+Zudomon
+Preciomon 0
+MarineAngemon 9
