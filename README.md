@@ -1,8 +1,8 @@
 # DW2Digivolver
-Make your Digimon Wolrd 2 gameplay a lot easier.
+Make your Digimon World 2 gameplay a lot easier.
 
 ## Description
-DW2 Digivolver is a JAVA developed software that aims to facilitate the creation of your Digimon Wolrd 2 team throughout the game. The software tries to create a friendly interface for the user to discover the easier ways to get a wanted Digimon via the DNA Digivolution system using an extensive database.
+DW2 Digivolver is a JAVA developed software that aims to facilitate the creation of your Digimon World 2 team throughout the game. The software tries to create a friendly interface for the user to discover the easier ways to get a wanted Digimon via the DNA Digivolution system using an extensive database.
 
 On future work, the software is to be updated to become a full support tool for playing Digimon World 2, extending the database to cover Skills, Stages, Items and more.
 
