@@ -45,6 +45,7 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 	private static String format = "%1$-20s%2$-20s%3$-20s";
 	private static String getMaterialformat = "%1$-15s%2$-15s%3$-15s";
 	private static String formatDigiv = "%1$-20s%2$-20s%3$-20s%4$-20s";
+	private static String formatEl = "%1$-20s%2$-20s%3$-20s%4$-20s%5$-20s";
 	private JCheckBox chckbxVaccine;
 	private JCheckBox chckbxVirus;
 	private JCheckBox chckbxData;
@@ -83,6 +84,10 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 	private JButton btnClear;
 	private Color[] color = {Color.BLACK, new Color(0, 127, 0), Color.BLUE, Color.RED, new Color(127, 127, 127)};
 	private JMenuItem mntmDigivolveMaterial;
+	private JSpinner maxLevelD1;
+	private JSpinner maxLevelD2;
+	private JLabel lblMaxEl;
+	private JLabel lblMaxEl_1;
 
 	public JPanelDisplay() {
 		setLayout(null);
@@ -205,7 +210,7 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		add(spinnerMin);
 		
 		spinnerMax = new JSpinner();
-		spinnerMax.setModel(new SpinnerNumberModel(0, 0, 99, 1));
+		spinnerMax.setModel(new SpinnerNumberModel(99, 0, 99, 1));
 		spinnerMax.setBounds(766, 97, 40, 20);
 		add(spinnerMax);
 		
@@ -299,6 +304,26 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		btnClear.setBounds(764, 606, 89, 23);
 		add(btnClear);
 		btnClear.addActionListener(handler);
+		
+		maxLevelD1 = new JSpinner();
+		maxLevelD1.setToolTipText("The maximum level Digimon 1 will get until its EXP becomes '9999999'.");
+		maxLevelD1.setModel(new SpinnerNumberModel(99, 1, 99, 1));
+		maxLevelD1.setBounds(265, 93, 40, 20);
+		add(maxLevelD1);
+		
+		maxLevelD2 = new JSpinner();
+		maxLevelD2.setToolTipText("The maximum level Digimon 2 will get until its EXP becomes '9999999'.");
+		maxLevelD2.setModel(new SpinnerNumberModel(99, 1, 99, 1));
+		maxLevelD2.setBounds(265, 181, 40, 20);
+		add(maxLevelD2);
+		
+		lblMaxEl = new JLabel("Max EL");
+		lblMaxEl.setBounds(233, 67, 46, 14);
+		add(lblMaxEl);
+		
+		lblMaxEl_1 = new JLabel("Max EL");
+		lblMaxEl_1.setBounds(233, 155, 46, 14);
+		add(lblMaxEl_1);
 	}
 	
 	private class buttonHandler implements ActionListener {
@@ -306,28 +331,27 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		public void printHeader(){
 			//BOX CLEAR
 			txtrResultarea.clear();
-			
 			switch (menuAction) {
 			case "dnaDigivolve":
 				if(chckbxIncludeAntidigivolutions.isSelected()){
 					//OPTION HEADER
-					txtrResultarea.println("---------------------------------------------------------------", color[4]);
+					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
 					txtrResultarea.println("DNA Digivolve "+d1TextField.getText()+" and "+d2TextField.getText());
 					
 					//TABLE HEADER
-					txtrResultarea.println("---------------------------------------------------------------", color[4]);
-					txtrResultarea.println(String.format(formatDigiv, "Digimon", "Type", "Level", "DP"), color[4]);
-					txtrResultarea.println("---------------------------------------------------------------", color[4]);
+					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
+					txtrResultarea.println(String.format(formatEl, "Digimon", "Type", "Level", "DP", "Max EL"), color[4]);
+					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
 					
 				}else{
 					//OPTION HEADER
-					txtrResultarea.println("-----------------------------------------------", color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
 					txtrResultarea.println("DNA Digivolve "+d1TextField.getText()+" and "+d2TextField.getText());
 					
 					//TABLE HEADER
-					txtrResultarea.println("-----------------------------------------------", color[4]);
-					txtrResultarea.println(String.format(format, "Digimon", "Type", "Level"), color[4]);
-					txtrResultarea.println("-----------------------------------------------", color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
+					txtrResultarea.println(String.format(formatDigiv, "Digimon", "Type", "Level", "Max EL"), color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
 				}
 				break;
 			case "digivolveMaterial":
@@ -482,16 +506,16 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			int cont = 0;
 			for(int i=0; i<list.size(); i++){
 				if(i==0){
-					output = String.format(formatDigiv, list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+					output = String.format(formatDigiv, list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 					txtrResultarea.print(output);
 				}else{
 					cont = list.get(i).getDigimon().getLevel() - digimon.getLevel() - 1;
 					space = spaceMaker(cont);
 					if(cont==0){
-						output = String.format(formatDigiv, space+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+						output = String.format(formatDigiv, space+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 						txtrResultarea.print(output);
 					}else{
-						output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+						output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 						txtrResultarea.print(output, color[cont]);
 					}
 				}
@@ -507,16 +531,16 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			int cont = 0;
 			for(int i=0; i<list.size(); i++){
 				if(i==0){
-					output = String.format(formatDigiv, list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+					output = String.format(formatDigiv, list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 					txtrResultarea.print(output);
 				}else{
 					cont = digimon.getLevel() - list.get(i).getDigimon().getLevel() - 1;
 					space = spaceMaker(cont);
 					if(cont==0){
-						output = String.format(formatDigiv, space+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+						output = String.format(formatDigiv, space+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 						txtrResultarea.print(output);
 					}else{
-						output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
+						output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
 						txtrResultarea.print(output, color[cont]);
 					}
 				}
@@ -558,31 +582,26 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 					if(result!=null) {
 						String output = "";
 						String space = "";
+						Integer el1 = (Integer) maxLevelD1.getValue();
+						Integer el2 = (Integer) maxLevelD2.getValue();
+						Integer elResult = Math.max(el1, el2) + Math.min(el1, el2)/5;
 						ArrayList<Digivolution> list;
 						
 						if(chckbxIncludeAntidigivolutions.isSelected()){
 							list = result.getDigivolutions(0, 99);
 							int cont = 0;
+							txtrResultarea.println(String.format(formatEl, result.getName(), Digimon.convertType(result.getType()), Digimon.convertLevel(result.getLevel()), "", elResult));
 							for(int i=0; i<list.size(); i++){
-								if(i==0){
-									output = String.format(formatDigiv, list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
-									txtrResultarea.print(output);
-								}else{
-									cont = list.get(i).getDigimon().getLevel() - result.getLevel() - 1;
-									space = spaceMaker(cont);
-									if(cont==0){
-										output = String.format(formatDigiv, space+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
-										txtrResultarea.print(output);
-									}else{
-										output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp())+"\n";
-										txtrResultarea.print(output, color[cont]);
-									}
-								}
+								if(list.get(i).getDigimon().getLevel()*10+1>elResult) continue;
+								cont = list.get(i).getDigimon().getLevel() - result.getLevel();
+								space = spaceMaker(cont);
+								output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
+								txtrResultarea.println(output, color[cont]);
 							}
-							txtrResultarea.println();
 						}else{
-							txtrResultarea.println(String.format(format, result.getName(), Digimon.convertType(result.getType()), Digimon.convertLevel(result.getLevel())));
+							txtrResultarea.println(String.format(formatDigiv, result.getName(), Digimon.convertType(result.getType()), Digimon.convertLevel(result.getLevel()), elResult));
 						}
+						txtrResultarea.println();
 					}
 						
 				}else if(menuAction.equals("getMaterials")){
@@ -679,6 +698,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			d2TextField.setText("");
 			if(event.getSource() == mntmDigivolve) {
 				menuAction="dnaDigivolve";
+				//Levels
+				maxLevelD1.setVisible(true);
+				maxLevelD2.setVisible(true);
+				lblMaxEl.setVisible(true);
+				lblMaxEl_1.setVisible(true);
+				
 				lblDigimon2.setVisible(true);
 				d2TextField.setVisible(true);
 				lblDigimon1.setText("Digimon 1");
@@ -708,6 +733,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmDigivolveMaterial) {
+				//Levels
+				maxLevelD1.setVisible(false);
+				maxLevelD2.setVisible(false);
+				lblMaxEl.setVisible(false);
+				lblMaxEl_1.setVisible(false);
+				
 				menuAction="digivolveMaterial";
 				lblDigimon2.setVisible(false);
 				d2TextField.setVisible(false);
@@ -738,6 +769,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmGetMaterials) {
+				//Levels
+				maxLevelD1.setVisible(false);
+				maxLevelD2.setVisible(false);
+				lblMaxEl.setVisible(false);
+				lblMaxEl_1.setVisible(false);
+				
 				menuAction="getMaterials";
 				lblDigimon2.setVisible(false);
 				d2TextField.setVisible(false);
@@ -763,6 +800,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setVisible(false);
 			}
 			if(event.getSource() == mntmGetMaterial) {
+				//Levels
+				maxLevelD1.setVisible(false);
+				maxLevelD2.setVisible(false);
+				lblMaxEl.setVisible(false);
+				lblMaxEl_1.setVisible(false);
+				
 				menuAction="getMaterial";
 				lblDigimon2.setVisible(true);
 				d2TextField.setVisible(true);
@@ -795,6 +838,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmDigivolve_1) {
+				//Levels
+				maxLevelD1.setVisible(false);
+				maxLevelD2.setVisible(false);
+				lblMaxEl.setVisible(false);
+				lblMaxEl_1.setVisible(false);
+				
 				menuAction="digimonDigivolve";
 				lblDigimon2.setVisible(false);
 				d2TextField.setVisible(false);
@@ -820,6 +869,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setVisible(false);
 			}
 			if(event.getSource() == mntmAntidigivolve) {
+				//Levels
+				maxLevelD1.setVisible(false);
+				maxLevelD2.setVisible(false);
+				lblMaxEl.setVisible(false);
+				lblMaxEl_1.setVisible(false);
+				
 				menuAction="digimonAntievolve";
 				lblDigimon2.setVisible(false);
 				d2TextField.setVisible(false);
@@ -848,7 +903,7 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			if(event.getSource() == mntmAboutMe) {
 				if(aboutMe==null){
 					JPanel p = new JPanelAboutMe();
-					JFrame f = new JFrame("HyperlinkListener");
+					JFrame f = new JFrame("About Me");
 					f.getContentPane().add(p, BorderLayout.CENTER);
 					f.setSize(450, 300);
 					f.setResizable(false);

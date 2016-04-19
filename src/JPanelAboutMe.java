@@ -13,6 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
 
 public class JPanelAboutMe extends JPanel {
 
@@ -47,8 +50,14 @@ public class JPanelAboutMe extends JPanel {
 				window.setVisible(false);
 			}
 		});
-		btnClose.setBounds(173, 226, 89, 23);
+		btnClose.setBounds(173, 229, 89, 23);
 		add(btnClose);
+		
+		JLabel lblVersion = new JLabel("Version 0.1.1");
+		lblVersion.setFont(new Font("Ubuntu Condensed", Font.PLAIN, 11));
+		lblVersion.setHorizontalAlignment(SwingConstants.CENTER);
+		lblVersion.setBounds(173, 210, 89, 14);
+		add(lblVersion);
 		
 		jep.addHyperlinkListener(new HyperlinkListener() {
 			public void hyperlinkUpdate(HyperlinkEvent hle) {

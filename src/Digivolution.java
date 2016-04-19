@@ -1,8 +1,8 @@
 
 public class Digivolution{
 	private Digimon digimon;
-	int minDp = 0;
-	int maxDp = 0;
+	private int minDp = 0;
+	private int maxDp = 0;
 	
 	public boolean isWithinDp(int minDp, int maxDp){
 		return this.minDp<=maxDp && this.maxDp>=minDp;
@@ -24,5 +24,8 @@ public class Digivolution{
 	
 	public int getMinDp(){
 		return minDp;
+	}
+	public int getMaxDp(){
+		return maxDp;
 	}
 }
