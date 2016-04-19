@@ -2,6 +2,7 @@
 * **Added**
 	* Max level calculation
 	* Digivolutions filtered by max level
+	* Range to DP (min and max) digivolutions and antidigivolutions.
 * **Fixed**
 	* Fixed DNA Digivolution not showing the result's name.
 	* Fixed the tabs and colors of DNA Digivolution.
