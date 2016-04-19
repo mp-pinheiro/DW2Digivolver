@@ -1,8 +1,8 @@
 #### Changelog: 0.1.1
-* ##### Added
+* **Added**
 	* Max level calculation
 	* Digivolutions filtered by max level
-* ##### Fixed
+* **Fixed**
 	* Fixed DNA Digivolution not showing the result's name.
 	* Fixed the tabs and colors of DNA Digivolution.
 	* Fixed the 'About Me' window name
