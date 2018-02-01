@@ -1,3 +1,4 @@
+package Digivolver;
 import java.util.ArrayList;
 
 public class Digimon {
@@ -8,6 +9,7 @@ public class Digimon {
 	private int el;
 	private ArrayList<Digivolution> antievolution;
 	private ArrayList<Digivolution> digivolution;
+	private Skill skill;
 	
 	public static String convertLevel(int i){
 		switch (i) {
@@ -164,6 +166,14 @@ public class Digimon {
 
 	public void setEl(int el) {
 		this.el = el;
+	}
+
+	public Skill getSkill(){
+		return skill;
+	}
+	
+	public void setSkill(Skill skill) {
+		this.skill = skill;
 	}
 	
 }

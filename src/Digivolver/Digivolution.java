@@ -1,4 +1,4 @@
-
+package Digivolver;
 public class Digivolution{
 	private Digimon digimon;
 	private int minDp = 0;

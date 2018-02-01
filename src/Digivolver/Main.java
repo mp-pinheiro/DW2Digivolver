@@ -1,8 +1,11 @@
+package Digivolver;
 import java.awt.Dimension;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+
+import jFrame.JPanelDisplay;
 
 public class Main {
 	public static ArrayList<Digimon> digimonList = new ArrayList<Digimon>();

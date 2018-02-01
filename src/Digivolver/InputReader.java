@@ -1,11 +1,66 @@
+package Digivolver;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-
+import java.util.regex.Pattern;
 
 public class InputReader {
 	private static Scanner scanner;
+	
+	private static void readSkillsFile(){
+		Skill skill = null;
+		String digimon = null;
+		String temp = null;
+		
+		try {
+			scanner = new Scanner(new File("tables/Skills.txt"));
+			scanner.useDelimiter(Pattern.compile("[\\n&]", Pattern.DOTALL));
+			
+			while(scanner.hasNext()){
+				skill = new Skill();
+				skill.setName(scanner.next());
+				//System.out.println("Name: "+skill.getName());
+				
+				scanner.next();
+				skill.setSpeciality(scanner.next());
+				//System.out.println("Speciality: "+skill.getSpeciality());
+				
+				skill.setType(scanner.next());
+				//System.out.println("Type: "+skill.getType());
+				
+				skill.setTarget(scanner.next());
+				//System.out.println("Target: "+skill.getTarget());
+				
+				skill.setMP(scanner.nextInt());
+				//System.out.println("MP: "+skill.getMP());
+				
+				skill.setAP(Integer.parseInt(scanner.next()));
+				//System.out.println("AP: "+skill.getAP());
+				
+				skill.setDescription(scanner.next());
+				//System.out.println("Desc: "+skill.getDescription());
+				
+				digimon = scanner.next();
+				//System.out.println("DG: "+digimon);
+				
+				temp = scanner.next();
+				
+				if(!temp.equals("-")){
+					skill.setHint(temp);
+					//System.out.println("Hint: "+temp);
+					scanner.next();
+				}
+				if(!digimon.equals("???")) Main.getDigimonByName(digimon).setSkill(skill);
+			}
+			scanner.reset();
+		}catch(FileNotFoundException e){
+			System.err.println("Error: cannot find file Skills.txt");
+			e.printStackTrace();
+		}finally{
+			scanner.useDelimiter(" ");
+		}
+	}
 	
 	private static void readDigivolutionsFile(){
 		String file = null;
@@ -43,6 +98,8 @@ public class InputReader {
 					}
 				}
 			}
+			Main.getDigimonByName(digimon).addAntievolution(new Digivolution(Main.getDigimonByName(antiDigimon), minDp, 99));
+			Main.getDigimonByName(antiDigimon).addDigivolution(new Digivolution(Main.getDigimonByName(digimon), minDp, 99));
 		} catch (FileNotFoundException e) {
 			System.err.println("Error: cannot find file "+file+".txt");
 			e.printStackTrace();
@@ -139,5 +196,6 @@ public class InputReader {
 		readDigimonFiles();
 		readDNAMatrixes();
 		readDigivolutionsFile();
+		readSkillsFile();
 	}
 }

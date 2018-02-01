@@ -1,3 +1,5 @@
+package jFrame;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -30,10 +32,12 @@ import javax.swing.SwingUtilities;
 
 import org.apache.commons.lang3.StringUtils;
 
+import Digivolver.Digimon;
+import Digivolver.Digivolution;
+import Digivolver.Main;
+import Digivolver.Skill;
+
 public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String menuAction = "dnaDigivolve";
 	private JTextField d1TextField;
@@ -42,10 +46,11 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 	private JButton btnDnaDigivolve;
 	private JTextPaneOutput txtrResultarea;
 	private boolean[] checkType, checkLevel;
-	private static String format = "%1$-20s%2$-20s%3$-20s";
+	private static String format = "%1$-22s%2$-22s%3$-22s";
 	private static String getMaterialformat = "%1$-15s%2$-15s%3$-15s";
-	private static String formatDigiv = "%1$-20s%2$-20s%3$-20s%4$-20s";
-	private static String formatEl = "%1$-20s%2$-20s%3$-20s%4$-20s%5$-20s";
+	private static String formatDigiv = "%1$-22s%2$-22s%3$-22s%4$-22s";
+	private static String formatEl = "%1$-22s%2$-22s%3$-22s%4$-22s%5$-22s";
+	private static String formatSkill = "%1$-18s%2$-18s%3$-18s%4$-18s%5$-18s%6$-18s";
 	private JCheckBox chckbxVaccine;
 	private JCheckBox chckbxVirus;
 	private JCheckBox chckbxData;
@@ -88,14 +93,14 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 	private JSpinner maxLevelD2;
 	private JLabel lblMaxEl;
 	private JLabel lblMaxEl_1;
+	private JMenu mnSkill;
+	private JMenuItem mntmByDigimon;
+	private checkListHandler clHandler;
+	private JMenuBar menuBar;
+	private JMenu mnDna;
+	private JMenuItem mntmByName;
 
-	public JPanelDisplay() {
-		setLayout(null);
-		SwingUtilities.getWindowAncestor(JPanelDisplay.this);
-		
-		//Sets the checklist handler (checks if they're clicked)
-		checkListHandler clHandler = new checkListHandler();
-		
+	private void addDigimonLabels(){
 		//Sets Digimon 1 label and text field
 		lblDigimon1 = new JLabel("Digimon 1");
 		lblDigimon1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -117,7 +122,9 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		d2TextField.setBounds(87, 180, 129, 23);
 		add(d2TextField);
 		d2TextField.setColumns(10);
-		
+	}
+	
+	private void addSubmitButton(){
 		//Sets the 'submit' button
 		btnDnaDigivolve = new JButton("Confirm");
 		btnDnaDigivolve.setBounds(347, 229, 116, 34);
@@ -125,17 +132,21 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		
 		handler = new buttonHandler();
 		btnDnaDigivolve.addActionListener(handler);
-		
+	}
+	
+	private void addResultBox(){
 		//Sets the result box
 		txtrResultarea = new JTextPaneOutput(this);
 		txtrResultarea.setFont(new Font("Consolas", Font.PLAIN, 12));
 		txtrResultarea.setBounds(21, 300, 832, 295);
 		txtrResultarea.setEditable(false);
-		JScrollPane scroll = new JScrollPane (txtrResultarea);
+		JScrollPane scroll = new JScrollPane(txtrResultarea);
 		scroll.setBounds(21, 300, 832, 295);
 	    scroll.setVisible(true);
 		add(scroll);
-		
+	}
+	
+	private void addFilterBoxes(){
 		lblType = new JLabel("Type");
 		lblType.setToolTipText("Filter the results by type.");
 		lblType.setBounds(360, 67, 46, 14);
@@ -182,8 +193,12 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		chckbxData.setSelected(true);
 		chckbxData.setBounds(360, 170, 97, 23);
 		add(chckbxData);
-		
+	}
+	
+	private void addCheckAllBoxes(){
 		//Sets 'mark all' boxes and its handler
+		clHandler = new checkListHandler();
+		
 		chckbxMarkAll = new JCheckBox("");
 		chckbxMarkAll.setSelected(true);
 		chckbxMarkAll.setToolTipText("Select all.");
@@ -197,13 +212,20 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		chckbxMarkAllLvl.setBounds(527, 92, 97, 23);
 		add(chckbxMarkAllLvl);
 		chckbxMarkAllLvl.addActionListener(clHandler);
-		
+	}
+	
+	private void addAntiDigivolutionBox(){
 		//Antidigivolution contents
 		chckbxIncludeAntidigivolutions = new JCheckBox("Include Digivolutions");
 		chckbxIncludeAntidigivolutions.setSelected(true);
 		chckbxIncludeAntidigivolutions.setBounds(687, 67, 165, 23);
 		add(chckbxIncludeAntidigivolutions);
 		
+		//Visibility of antis and listener
+		chckbxIncludeAntidigivolutions.addActionListener(clHandler);
+	}
+	
+	private void addSpinners(){
 		spinnerMin = new JSpinner();
 		spinnerMin.setModel(new SpinnerNumberModel(0, 0, 99, 1));
 		spinnerMin.setBounds(716, 97, 40, 20);
@@ -221,89 +243,6 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		label = new JLabel("-");
 		label.setBounds(758, 100, 46, 14);
 		add(label);
-		
-		//Everything is false (first screen)
-		lblType.setVisible(false);
-		lblLevel.setVisible(false);
-		chckbxMarkAll.setVisible(false);
-		chckbxMarkAllLvl.setVisible(false);
-		chckbxVaccine.setVisible(false);
-		chckbxVirus.setVisible(false);
-		chckbxData.setVisible(false);
-		chckbxRookie.setVisible(false);
-		chckbxChampion.setVisible(false);
-		chckbxUltimate.setVisible(false);
-		chckbxMega.setVisible(false);
-		
-		//Visibility of antis and listener
-		chckbxIncludeAntidigivolutions.addActionListener(clHandler);
-		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 882, 21);
-		add(menuBar);
-		
-		mnFile = new JMenu("File");
-		menuBar.add(mnFile);
-		
-		mntmSave = new JMenuItem("Save As...");
-		mntmSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
-		mnFile.add(mntmSave);
-		mntmSave.addActionListener(this);
-		
-		mntmPreferences = new JMenuItem("Preferences");
-		mntmPreferences.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_I, InputEvent.CTRL_MASK));
-		mnFile.add(mntmPreferences);
-		mntmPreferences.addActionListener(this);
-		
-		separator = new JSeparator();
-		mnFile.add(separator);
-		
-		mntmExit = new JMenuItem("Exit");
-		mntmExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, InputEvent.CTRL_MASK));
-		mnFile.add(mntmExit);
-		mntmExit.addActionListener(this);
-		
-		JMenu mnDna = new JMenu("DNA");
-		menuBar.add(mnDna);
-		
-		mntmDigivolve = new JMenuItem("Digivolve 2 Materials");
-		mnDna.add(mntmDigivolve);
-		mntmDigivolve.addActionListener(this);
-		
-		mntmDigivolveMaterial = new JMenuItem("Digivolve 1 Material");
-		mnDna.add(mntmDigivolveMaterial);
-		mntmDigivolveMaterial.addActionListener(this);
-		
-		mntmGetMaterials = new JMenuItem("Get 2 Materials");
-		mnDna.add(mntmGetMaterials);
-		mntmGetMaterials.addActionListener(this);
-		
-		mntmGetMaterial = new JMenuItem("Get 1 Material");
-		mnDna.add(mntmGetMaterial);
-		mntmGetMaterial.addActionListener(this);
-		
-		mnDigimon = new JMenu("Digimon");
-		menuBar.add(mnDigimon);
-		
-		mntmDigivolve_1 = new JMenuItem("Digivolve");
-		mnDigimon.add(mntmDigivolve_1);
-		mntmDigivolve_1.addActionListener(this);
-		
-		mntmAntidigivolve = new JMenuItem("Antidigivolve");
-		mnDigimon.add(mntmAntidigivolve);
-		mntmAntidigivolve.addActionListener(this);
-		
-		mnHelp = new JMenu("Help");
-		menuBar.add(mnHelp);
-		
-		mntmAboutMe = new JMenuItem("About me...");
-		mnHelp.add(mntmAboutMe);
-		mntmAboutMe.addActionListener(this);
-		
-		btnClear = new JButton("Clear");
-		btnClear.setBounds(764, 606, 89, 23);
-		add(btnClear);
-		btnClear.addActionListener(handler);
 		
 		maxLevelD1 = new JSpinner();
 		maxLevelD1.setToolTipText("The maximum level Digimon 1 will get until its EXP becomes '9999999'.");
@@ -326,8 +265,126 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 		add(lblMaxEl_1);
 	}
 	
-	private class buttonHandler implements ActionListener {
+	private void addMenuBar(){
+		menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 882, 21);
+		add(menuBar);
+	}
+	
+	private void addMenuOptions(){
+		mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		addFileOptions();
 		
+		mnDna = new JMenu("DNA");
+		menuBar.add(mnDna);
+		addDNAOptions();
+		
+		mnDigimon = new JMenu("Digimon");
+		menuBar.add(mnDigimon);
+		addDigimonOptions();
+		
+		mnSkill = new JMenu("Skill");
+		menuBar.add(mnSkill);
+		addSkillOptions();
+		
+		mnHelp = new JMenu("Help");
+		menuBar.add(mnHelp);
+		addHelpOptions();
+	}
+	
+	private void addFileOptions(){
+		mntmSave = new JMenuItem("Save As...");
+		mntmSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
+		mnFile.add(mntmSave);
+		mntmSave.addActionListener(this);
+		
+		mntmPreferences = new JMenuItem("Preferences");
+		mntmPreferences.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_I, InputEvent.CTRL_MASK));
+		mnFile.add(mntmPreferences);
+		mntmPreferences.addActionListener(this);
+		
+		separator = new JSeparator();
+		mnFile.add(separator);
+		
+		mntmExit = new JMenuItem("Exit");
+		mntmExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, InputEvent.CTRL_MASK));
+		mnFile.add(mntmExit);
+		mntmExit.addActionListener(this);
+	}
+	
+	private void addDNAOptions(){
+		mntmDigivolve = new JMenuItem("Digivolve 2 Materials");
+		mnDna.add(mntmDigivolve);
+		mntmDigivolve.addActionListener(this);
+		
+		mntmDigivolveMaterial = new JMenuItem("Digivolve 1 Material");
+		mnDna.add(mntmDigivolveMaterial);
+		mntmDigivolveMaterial.addActionListener(this);
+		
+		mntmGetMaterials = new JMenuItem("Get 2 Materials");
+		mnDna.add(mntmGetMaterials);
+		mntmGetMaterials.addActionListener(this);
+		
+		mntmGetMaterial = new JMenuItem("Get 1 Material");
+		mnDna.add(mntmGetMaterial);
+		mntmGetMaterial.addActionListener(this);
+	}
+	
+	private void addDigimonOptions(){
+		mntmDigivolve_1 = new JMenuItem("Digivolve");
+		mnDigimon.add(mntmDigivolve_1);
+		mntmDigivolve_1.addActionListener(this);
+		
+		mntmAntidigivolve = new JMenuItem("Antidigivolve");
+		mnDigimon.add(mntmAntidigivolve);
+		mntmAntidigivolve.addActionListener(this);
+	}
+	
+	private void addSkillOptions(){
+		mntmByDigimon = new JMenuItem("By Digimon");
+		mnSkill.add(mntmByDigimon);
+		mntmByDigimon.addActionListener(this);
+		
+		mntmByName = new JMenuItem("By Name");
+		mnSkill.add(mntmByName);
+		mntmByName.addActionListener(this);
+	}
+	
+	private void addHelpOptions(){
+		mntmAboutMe = new JMenuItem("About me...");
+		mnHelp.add(mntmAboutMe);
+		mntmAboutMe.addActionListener(this);
+	}
+	
+	private void addClearButton(){
+		btnClear = new JButton("Clear");
+		btnClear.setBounds(764, 606, 89, 23);
+		add(btnClear);
+		btnClear.addActionListener(handler);
+	}
+	
+	public JPanelDisplay() {
+		setLayout(null);
+		SwingUtilities.getWindowAncestor(JPanelDisplay.this);
+		
+		//Screen
+		addDigimonLabels();
+		addSubmitButton();
+		addFilterBoxes();
+		addCheckAllBoxes();
+		addAntiDigivolutionBox();
+		addSpinners();
+		setInitialState();
+		addClearButton();
+		addResultBox();
+		
+		//Menus
+		addMenuBar();
+		addMenuOptions();
+	}
+	
+	private class buttonHandler implements ActionListener {
 		public void printHeader(){
 			//BOX CLEAR
 			txtrResultarea.clear();
@@ -335,23 +392,23 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			case "dnaDigivolve":
 				if(chckbxIncludeAntidigivolutions.isSelected()){
 					//OPTION HEADER
-					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------------------------------------", color[4]);
 					txtrResultarea.println("DNA Digivolve "+d1TextField.getText()+" and "+d2TextField.getText());
 					
 					//TABLE HEADER
-					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------------------------------------", color[4]);
 					txtrResultarea.println(String.format(formatEl, "Digimon", "Type", "Level", "DP", "Max EL"), color[4]);
-					txtrResultarea.println("---------------------------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-------------------------------------------------------------------------------------------------", color[4]);
 					
 				}else{
 					//OPTION HEADER
-					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-----------------------------------------------------------------------------", color[4]);
 					txtrResultarea.println("DNA Digivolve "+d1TextField.getText()+" and "+d2TextField.getText());
 					
 					//TABLE HEADER
-					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-----------------------------------------------------------------------------", color[4]);
 					txtrResultarea.println(String.format(formatDigiv, "Digimon", "Type", "Level", "Max EL"), color[4]);
-					txtrResultarea.println("-------------------------------------------------------------------", color[4]);
+					txtrResultarea.println("-----------------------------------------------------------------------------", color[4]);
 				}
 				break;
 			case "digivolveMaterial":
@@ -376,33 +433,43 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				break;
 			case "getMaterial":
 				//OPTION HEADER
-				txtrResultarea.println("-----------------------------------------------", color[4]);
+				txtrResultarea.println("---------------------------------------------------------", color[4]);
 				txtrResultarea.println("Get ALL DIGIMON that combined with "+d1TextField.getText()+" result in "+d2TextField.getText());
 				
 				//TABLE HEADER
-				txtrResultarea.println("-----------------------------------------------", color[4]);
+				txtrResultarea.println("---------------------------------------------------------", color[4]);
 				txtrResultarea.println(String.format(format, "Digimon", "Type", "Level"), color[4]);
-				txtrResultarea.println("-----------------------------------------------", color[4]);
+				txtrResultarea.println("---------------------------------------------------------", color[4]);
 				break;
 			case "digimonDigivolve":
 				//OPTION HEADER
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
 				txtrResultarea.println("Digivolve "+d1TextField.getText());
 				
 				//TABLE HEADER
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
 				txtrResultarea.println(String.format(formatDigiv, "Digimon", "Type", "Level", "DP"), color[4]);
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
 				break;
 			case "digimonAntievolve":
 				//OPTION HEADER
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
 				txtrResultarea.println("Antidigivolve "+d1TextField.getText());
 				
 				//TABLE HEADER
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
 				txtrResultarea.println(String.format(formatDigiv, "Digimon", "Type", "Level", "DP"), color[4]);
-				txtrResultarea.println("---------------------------------------------------------------", color[4]);
+				txtrResultarea.println("-------------------------------------------------------------------------", color[4]);
+				break;
+			case "skillByDigimon":
+				//OPTION HEADER
+				txtrResultarea.println("---------------------------------------------------------------------------------------------------", color[4]);
+				txtrResultarea.println("Get "+d1TextField.getText()+"'s skill");
+				
+				//TABLE HEADER
+				txtrResultarea.println("---------------------------------------------------------------------------------------------------", color[4]);
+				txtrResultarea.println(String.format(formatSkill, "Name", "Speciality", "Type", "Target", "MP", "AP"), color[4]);
+				txtrResultarea.println("---------------------------------------------------------------------------------------------------", color[4]);
 				break;
 			default:
 				break;
@@ -548,6 +615,23 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			txtrResultarea.println();
 		}
 		
+		private void printDigimonSkill(Digimon digimon){
+			Skill skill = digimon.getSkill();
+			
+			printHeader();
+			String output = String.format(formatSkill, skill.getName(), skill.getSpeciality(), skill.getType(), skill.getTarget(), skill.getMP(), skill.getAP());
+			txtrResultarea.println(output);
+			
+			txtrResultarea.print("Description: ", color[4]);
+			txtrResultarea.println(skill.getDescription()+".");
+			
+			if(skill.getHint()!=null){
+				txtrResultarea.print("Hint: ", color[4]);
+				txtrResultarea.println(skill.getHint()+".");
+			}
+			txtrResultarea.println();
+		}
+		
 		public void actionPerformed(ActionEvent event) {
 			if(event.getSource() == btnClear) {
 				txtrResultarea.setText("");
@@ -595,7 +679,7 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 								if(list.get(i).getDigimon().getLevel()*10+1>elResult) continue;
 								cont = list.get(i).getDigimon().getLevel() - result.getLevel();
 								space = spaceMaker(cont);
-								output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"))+"\n";
+								output = String.format(formatDigiv, space+"+"+list.get(i).getDigimon().getName(), Digimon.convertType(list.get(i).getDigimon().getType()), Digimon.convertLevel(list.get(i).getDigimon().getLevel()), list.get(i).getMinDp()+(list.get(i).getMaxDp()!=99?"-"+list.get(i).getMaxDp():"+"));
 								txtrResultarea.println(output, color[cont]);
 							}
 						}else{
@@ -603,7 +687,6 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 						}
 						txtrResultarea.println();
 					}
-						
 				}else if(menuAction.equals("getMaterials")){
 					//DNA GET FUSION
 					int subject1Index = Main.digimonNameList.indexOf(digimon1);
@@ -632,7 +715,6 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 					}else{
 						printDigivolutionList(Main.getDigimonByName(digimon1).getNextDigivolution(Main.getDigimonByName(digimon1)));
 					}
-					
 				}else if(menuAction.equals("digimonAntievolve")){
 					//DIGIMON GET ANTIDIGIVOLUTIONS
 					if(chckbxIncludeAntidigivolutions.isSelected()){
@@ -646,15 +728,22 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 					Digimon subject1 = Main.digimonList.get(subject1Index);
 					ArrayList<Digimon>[] result = Main.DNAGetCombinations(subject1, checkType, checkLevel);
 					
-					//Writes Output
+					//WRITES OUTPUT
 					printCombinations(result);
+				}else if(menuAction.equals("skillByDigimon")){
+					//SHOW SKILLS BY DIGIMON
+					int index = Main.digimonNameList.indexOf(digimon1);
+					printDigimonSkill(Main.digimonList.get(index));
+				}else if(menuAction.equals("skillsByName")){
+					//SHOW SKILLS BY DIGIMON
+					int index = Main.digimonNameList.indexOf(digimon1);
+					printDigimonSkill(Main.digimonList.get(index));
 				}
 			}
 		}
 	}
 	
 	private class checkListHandler implements ActionListener {
-		
 		public void actionPerformed(ActionEvent event) {
 			if(event.getSource() == chckbxMarkAll) {
 				chckbxVaccine.setSelected(chckbxMarkAll.isSelected());
@@ -673,6 +762,61 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				lblDp.setEnabled(chckbxIncludeAntidigivolutions.isSelected());
 			}
 		}
+	}
+	
+	private void setInitialState(){
+		//Everything is false (first screen)
+		lblType.setVisible(false);
+		lblLevel.setVisible(false);
+		chckbxMarkAll.setVisible(false);
+		chckbxMarkAllLvl.setVisible(false);
+		chckbxVaccine.setVisible(false);
+		chckbxVirus.setVisible(false);
+		chckbxData.setVisible(false);
+		chckbxRookie.setVisible(false);
+		chckbxChampion.setVisible(false);
+		chckbxUltimate.setVisible(false);
+		chckbxMega.setVisible(false);
+	}
+	
+	private void clearScreen(){
+		//Levels
+		maxLevelD1.setVisible(false);
+		maxLevelD2.setVisible(false);
+		lblMaxEl.setVisible(false);
+		lblMaxEl_1.setVisible(false);
+		
+		//Digimon 1 and 2 text and label
+		lblDigimon1.setText("Digimon 1");
+		lblDigimon1.setVisible(false);
+		d1TextField.setVisible(false);
+		lblDigimon2.setText("Digimon 2");
+		lblDigimon2.setVisible(false);
+		d2TextField.setVisible(false);
+		
+		//Boxes
+		lblType.setVisible(false);
+		lblLevel.setVisible(false);
+		chckbxMarkAll.setVisible(false);
+		chckbxMarkAllLvl.setVisible(false);
+		chckbxVaccine.setVisible(false);
+		chckbxVirus.setVisible(false);
+		chckbxData.setVisible(false);
+		chckbxRookie.setVisible(false);
+		chckbxChampion.setVisible(false);
+		chckbxUltimate.setVisible(false);
+		chckbxMega.setVisible(false);
+		chckbxIncludeAntidigivolutions.setVisible(false);
+		chckbxIncludeAntidigivolutions.setText("Include Digivolutions.");
+		chckbxIncludeAntidigivolutions.setSelected(false);
+		spinnerMin.setVisible(false);
+		spinnerMax.setVisible(false);
+		lblDp.setVisible(false);
+		label.setVisible(false);
+		spinnerMin.setEnabled(false);
+		spinnerMax.setEnabled(false);
+		lblDp.setEnabled(false);
+		label.setEnabled(false);
 	}
 
 	@Override
@@ -698,28 +842,23 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 			d2TextField.setText("");
 			if(event.getSource() == mntmDigivolve) {
 				menuAction="dnaDigivolve";
+				clearScreen();
+				
 				//Levels
 				maxLevelD1.setVisible(true);
 				maxLevelD2.setVisible(true);
 				lblMaxEl.setVisible(true);
 				lblMaxEl_1.setVisible(true);
 				
+				//Digimon 1 and 2 text and label
+				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				lblDigimon2.setText("Digimon 2");
 				lblDigimon2.setVisible(true);
 				d2TextField.setVisible(true);
-				lblDigimon1.setText("Digimon 1");
-				lblDigimon2.setText("Digimon 2");
+				
 				//Boxes
-				lblType.setVisible(false);
-				lblLevel.setVisible(false);
-				chckbxMarkAll.setVisible(false);
-				chckbxMarkAllLvl.setVisible(false);
-				chckbxVaccine.setVisible(false);
-				chckbxVirus.setVisible(false);
-				chckbxData.setVisible(false);
-				chckbxRookie.setVisible(false);
-				chckbxChampion.setVisible(false);
-				chckbxUltimate.setVisible(false);
-				chckbxMega.setVisible(false);
 				chckbxIncludeAntidigivolutions.setVisible(true);
 				chckbxIncludeAntidigivolutions.setText("Include Digivolutions.");
 				chckbxIncludeAntidigivolutions.setSelected(true);
@@ -733,16 +872,14 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmDigivolveMaterial) {
-				//Levels
-				maxLevelD1.setVisible(false);
-				maxLevelD2.setVisible(false);
-				lblMaxEl.setVisible(false);
-				lblMaxEl_1.setVisible(false);
-				
 				menuAction="digivolveMaterial";
-				lblDigimon2.setVisible(false);
-				d2TextField.setVisible(false);
+				clearScreen();
+				
+				//Digimon text and label
 				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				
 				//Boxes
 				lblType.setVisible(true);
 				lblLevel.setVisible(true);
@@ -769,16 +906,14 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmGetMaterials) {
-				//Levels
-				maxLevelD1.setVisible(false);
-				maxLevelD2.setVisible(false);
-				lblMaxEl.setVisible(false);
-				lblMaxEl_1.setVisible(false);
-				
 				menuAction="getMaterials";
-				lblDigimon2.setVisible(false);
-				d2TextField.setVisible(false);
+				clearScreen();
+				
+				//Digimon text and label
 				lblDigimon1.setText("Result");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				
 				//Boxes
 				lblType.setVisible(true);
 				lblLevel.setVisible(true);
@@ -793,24 +928,19 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				chckbxChampion.setVisible(true);
 				chckbxUltimate.setVisible(true);
 				chckbxMega.setVisible(true);
-				chckbxIncludeAntidigivolutions.setVisible(false);
-				spinnerMin.setVisible(false);
-				spinnerMax.setVisible(false);
-				lblDp.setVisible(false);
-				label.setVisible(false);
 			}
 			if(event.getSource() == mntmGetMaterial) {
-				//Levels
-				maxLevelD1.setVisible(false);
-				maxLevelD2.setVisible(false);
-				lblMaxEl.setVisible(false);
-				lblMaxEl_1.setVisible(false);
-				
 				menuAction="getMaterial";
+				clearScreen();
+								
+				//Digimon 1 and 2 text and label
+				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				lblDigimon2.setText("Result");
 				lblDigimon2.setVisible(true);
 				d2TextField.setVisible(true);
-				lblDigimon1.setText("Digimon 1");
-				lblDigimon2.setText("Result");
+				
 				//Boxes
 				lblType.setVisible(true);
 				lblLevel.setVisible(true);
@@ -838,67 +968,50 @@ public class JPanelDisplay extends javax.swing.JPanel implements ActionListener{
 				label.setEnabled(true);
 			}
 			if(event.getSource() == mntmDigivolve_1) {
-				//Levels
-				maxLevelD1.setVisible(false);
-				maxLevelD2.setVisible(false);
-				lblMaxEl.setVisible(false);
-				lblMaxEl_1.setVisible(false);
-				
 				menuAction="digimonDigivolve";
-				lblDigimon2.setVisible(false);
-				d2TextField.setVisible(false);
+				clearScreen();
+				
+				//Digimon text and label
 				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				
 				//Boxes
-				lblType.setVisible(false);
-				lblLevel.setVisible(false);
-				chckbxMarkAll.setVisible(false);
-				chckbxMarkAllLvl.setVisible(false);
-				chckbxVaccine.setVisible(false);
-				chckbxVirus.setVisible(false);
-				chckbxData.setVisible(false);
-				chckbxRookie.setVisible(false);
-				chckbxChampion.setVisible(false);
-				chckbxUltimate.setVisible(false);
-				chckbxMega.setVisible(false);
 				chckbxIncludeAntidigivolutions.setVisible(true);
 				chckbxIncludeAntidigivolutions.setText("Include All Digivolutions.");
 				chckbxIncludeAntidigivolutions.setSelected(true);
-				spinnerMin.setVisible(false);
-				spinnerMax.setVisible(false);
-				lblDp.setVisible(false);
-				label.setVisible(false);
 			}
 			if(event.getSource() == mntmAntidigivolve) {
-				//Levels
-				maxLevelD1.setVisible(false);
-				maxLevelD2.setVisible(false);
-				lblMaxEl.setVisible(false);
-				lblMaxEl_1.setVisible(false);
-				
 				menuAction="digimonAntievolve";
-				lblDigimon2.setVisible(false);
-				d2TextField.setVisible(false);
+				clearScreen();
+				
+				//Digimon text and label
 				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+				
 				//Boxes
-				lblType.setVisible(false);
-				lblLevel.setVisible(false);
-				chckbxMarkAll.setVisible(false);
-				chckbxMarkAllLvl.setVisible(false);
-				chckbxVaccine.setVisible(false);
-				chckbxVirus.setVisible(false);
-				chckbxData.setVisible(false);
-				chckbxRookie.setVisible(false);
-				chckbxRookie.setEnabled(true);
-				chckbxChampion.setVisible(false);
-				chckbxUltimate.setVisible(false);
-				chckbxMega.setVisible(false);
 				chckbxIncludeAntidigivolutions.setVisible(true);
 				chckbxIncludeAntidigivolutions.setText("Include All Antidigivolutions.");
 				chckbxIncludeAntidigivolutions.setSelected(true);
-				spinnerMin.setVisible(false);
-				spinnerMax.setVisible(false);
-				lblDp.setVisible(false);
-				label.setVisible(false);
+			}
+			if(event.getSource() == mntmByDigimon) {
+				menuAction="skillByDigimon";
+				clearScreen();
+					
+				//Digimon text and label
+				lblDigimon1.setText("Digimon 1");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
+			}
+			if(event.getSource() == mntmByName) {
+				menuAction="skillsByName";
+				clearScreen();
+					
+				//Digimon text and label
+				lblDigimon1.setText("Skill Name");
+				lblDigimon1.setVisible(true);
+				d1TextField.setVisible(true);
 			}
 			if(event.getSource() == mntmAboutMe) {
 				if(aboutMe==null){

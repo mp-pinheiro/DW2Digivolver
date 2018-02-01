@@ -1,3 +1,4 @@
+package jFrame;
 import java.awt.Color;
 
 import javax.swing.JTextPane;
@@ -8,9 +9,6 @@ import javax.swing.text.StyleContext;
 
 public class JTextPaneOutput extends JTextPane{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3815312397037701915L;
 	private JPanelDisplay context;
 	
