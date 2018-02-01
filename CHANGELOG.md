@@ -1,3 +1,13 @@
+#### Changelog: 0.1.2
+* ##### Added
+	* Added credits to MetalKid's guide for the Skills table.
+	* Added "skills" menu and skill by digimon name.
+* ##### Fixed
+	* Fixed some implementation problems.
+	* Fixed last digivolution not being read.
+	* Fixed extra line break in DNA Digivolutions' output.
+	* Fixed header separators (they now cover the whole output).
+
 #### Changelog: 0.1.1
 * **Added**
 	* Max level calculation
