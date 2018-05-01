@@ -1,0 +1,224 @@
+Digimon             Type                Level               DP                  
+---------------------------------------------------------------
+Greymon             Vaccine             Champion            0                   
+  +MetalGreymon     Vaccine             Ultimate            0                   
+    +WarGreymon     Vaccine             Mega                0                   
+    +Omnimon        Vaccine             Mega                20                  
+  +MTyrannomon      Vaccine             Ultimate            6                   
+    +WarGreymon     Vaccine             Mega                0                   
+  +SkullGreymon     Virus               Ultimate            9                   
+    +Machinedramon  Virus               Mega                0                   
+
+Digimon        Type           Level          	Digimon        Type           Level          
+------------------------------------------------------------------------------------------
+Dolphmon       Vaccine        Champion       	Greymon        Vaccine        Champion       	
+Dolphmon       Vaccine        Champion       	MTyrannomon    Vaccine        Ultimate       	
+Dolphmon       Vaccine        Champion       	MetalGreymon   Vaccine        Ultimate       	
+Dolphmon       Vaccine        Champion       	Omnimon        Vaccine        Mega           	
+Dolphmon       Vaccine        Champion       	WarGreymon     Vaccine        Mega           	
+Dolphmon       Vaccine        Champion       	Cyclonemon     Virus          Champion       	
+Dolphmon       Vaccine        Champion       	Darkrizamon    Virus          Champion       	
+Dolphmon       Vaccine        Champion       	DTyrannomon    Virus          Champion       	
+Dolphmon       Vaccine        Champion       	Deltamon       Virus          Champion       	
+Dolphmon       Vaccine        Champion       	Devidramon     Virus          Champion       	
+Dolphmon       Vaccine        Champion       	Tuskmon        Virus          Champion       	
+Dolphmon       Vaccine        Champion       	Extyrannomon   Virus          Ultimate       	
+Dolphmon       Vaccine        Champion       	Gigadramon     Virus          Ultimate       	
+Dolphmon       Vaccine        Champion       	Megadramon     Virus          Ultimate       	
+Dolphmon       Vaccine        Champion       	MTyrannomon    Virus          Ultimate       	
+Dolphmon       Vaccine        Champion       	SkullGreymon   Virus          Ultimate       	
+Dolphmon       Vaccine        Champion       	Machinedramon  Virus          Mega           	
+Greymon        Vaccine        Champion       	Greymon        Vaccine        Champion       	
+Greymon        Vaccine        Champion       	Ikkakumon      Vaccine        Champion       	
+Greymon        Vaccine        Champion       	Tortomon       Vaccine        Champion       	
+Greymon        Vaccine        Champion       	MTyrannomon    Vaccine        Ultimate       	
+Greymon        Vaccine        Champion       	MetalGreymon   Vaccine        Ultimate       	
+Greymon        Vaccine        Champion       	Whamon         Vaccine        Ultimate       	
+Greymon        Vaccine        Champion       	Zudomon        Vaccine        Ultimate       	
+Greymon        Vaccine        Champion       	MarineAngemon  Vaccine        Mega           	
+Greymon        Vaccine        Champion       	Omnimon        Vaccine        Mega           	
+Greymon        Vaccine        Champion       	WarGreymon     Vaccine        Mega           	
+Greymon        Vaccine        Champion       	Cyclonemon     Virus          Champion       	
+Greymon        Vaccine        Champion       	Darkrizamon    Virus          Champion       	
+Greymon        Vaccine        Champion       	DTyrannomon    Virus          Champion       	
+Greymon        Vaccine        Champion       	Deltamon       Virus          Champion       	
+Greymon        Vaccine        Champion       	Devidramon     Virus          Champion       	
+Greymon        Vaccine        Champion       	Gekomon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Gesomon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Guardromon     Virus          Champion       	
+Greymon        Vaccine        Champion       	Numemon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Octomon        Virus          Champion       	
+Greymon        Vaccine        Champion       	PSukamon       Virus          Champion       	
+Greymon        Vaccine        Champion       	Raremon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Sukamon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Tuskmon        Virus          Champion       	
+Greymon        Vaccine        Champion       	Datamon        Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Dragomon       Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Extyrannomon   Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Garbagemon     Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Gigadramon     Virus          Ultimate       	
+Greymon        Vaccine        Champion       	MarineDevimon  Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Megadramon     Virus          Ultimate       	
+Greymon        Vaccine        Champion       	MTyrannomon    Virus          Ultimate       	
+Greymon        Vaccine        Champion       	ShogunGekomon  Virus          Ultimate       	
+Greymon        Vaccine        Champion       	SkullGreymon   Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Vademon        Virus          Ultimate       	
+Greymon        Vaccine        Champion       	WaruSeadramon  Virus          Ultimate       	
+Greymon        Vaccine        Champion       	Machinedramon  Virus          Mega           	
+Greymon        Vaccine        Champion       	Pukumon        Virus          Mega           	
+Ikkakumon      Vaccine        Champion       	MTyrannomon    Vaccine        Ultimate       	
+Ikkakumon      Vaccine        Champion       	MetalGreymon   Vaccine        Ultimate       	
+Ikkakumon      Vaccine        Champion       	Omnimon        Vaccine        Mega           	
+Ikkakumon      Vaccine        Champion       	WarGreymon     Vaccine        Mega           	
+Ikkakumon      Vaccine        Champion       	Cyclonemon     Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	Darkrizamon    Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	DTyrannomon    Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	Deltamon       Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	Devidramon     Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	Tuskmon        Virus          Champion       	
+Ikkakumon      Vaccine        Champion       	Extyrannomon   Virus          Ultimate       	
+Ikkakumon      Vaccine        Champion       	Gigadramon     Virus          Ultimate       	
+Ikkakumon      Vaccine        Champion       	Megadramon     Virus          Ultimate       	
+Ikkakumon      Vaccine        Champion       	MTyrannomon    Virus          Ultimate       	
+Ikkakumon      Vaccine        Champion       	SkullGreymon   Virus          Ultimate       	
+Ikkakumon      Vaccine        Champion       	Machinedramon  Virus          Mega           	
+Tortomon       Vaccine        Champion       	MTyrannomon    Vaccine        Ultimate       	
+Tortomon       Vaccine        Champion       	MetalGreymon   Vaccine        Ultimate       	
+Tortomon       Vaccine        Champion       	Omnimon        Vaccine        Mega           	
+Tortomon       Vaccine        Champion       	WarGreymon     Vaccine        Mega           	
+Tortomon       Vaccine        Champion       	Cyclonemon     Virus          Champion       	
+Tortomon       Vaccine        Champion       	Darkrizamon    Virus          Champion       	
+Tortomon       Vaccine        Champion       	DTyrannomon    Virus          Champion       	
+Tortomon       Vaccine        Champion       	Deltamon       Virus          Champion       	
+Tortomon       Vaccine        Champion       	Devidramon     Virus          Champion       	
+Tortomon       Vaccine        Champion       	Tuskmon        Virus          Champion       	
+Tortomon       Vaccine        Champion       	Extyrannomon   Virus          Ultimate       	
+Tortomon       Vaccine        Champion       	Gigadramon     Virus          Ultimate       	
+Tortomon       Vaccine        Champion       	Megadramon     Virus          Ultimate       	
+Tortomon       Vaccine        Champion       	MTyrannomon    Virus          Ultimate       	
+Tortomon       Vaccine        Champion       	SkullGreymon   Virus          Ultimate       	
+Tortomon       Vaccine        Champion       	Machinedramon  Virus          Mega           	
+MTyrannomon    Vaccine        Ultimate       	Cyclonemon     Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Darkrizamon    Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	DTyrannomon    Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Deltamon       Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Devidramon     Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Gekomon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Gesomon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Guardromon     Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Numemon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Octomon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	PSukamon       Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Raremon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Sukamon        Virus          Champion       	
+MTyrannomon    Vaccine        Ultimate       	Tuskmon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Cyclonemon     Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Darkrizamon    Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	DTyrannomon    Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Deltamon       Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Devidramon     Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Gekomon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Gesomon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Guardromon     Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Numemon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Octomon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	PSukamon       Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Raremon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Sukamon        Virus          Champion       	
+MetalGreymon   Vaccine        Ultimate       	Tuskmon        Virus          Champion       	
+Whamon         Vaccine        Ultimate       	Cyclonemon     Virus          Champion       	
+Whamon         Vaccine        Ultimate       	Darkrizamon    Virus          Champion       	
+Whamon         Vaccine        Ultimate       	DTyrannomon    Virus          Champion       	
+Whamon         Vaccine        Ultimate       	Deltamon       Virus          Champion       	
+Whamon         Vaccine        Ultimate       	Devidramon     Virus          Champion       	
+Whamon         Vaccine        Ultimate       	Tuskmon        Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	Cyclonemon     Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	Darkrizamon    Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	DTyrannomon    Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	Deltamon       Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	Devidramon     Virus          Champion       	
+Zudomon        Vaccine        Ultimate       	Tuskmon        Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	Cyclonemon     Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	Darkrizamon    Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	DTyrannomon    Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	Deltamon       Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	Devidramon     Virus          Champion       	
+MarineAngemon  Vaccine        Mega           	Tuskmon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Cyclonemon     Virus          Champion       	
+Omnimon        Vaccine        Mega           	Darkrizamon    Virus          Champion       	
+Omnimon        Vaccine        Mega           	DTyrannomon    Virus          Champion       	
+Omnimon        Vaccine        Mega           	Deltamon       Virus          Champion       	
+Omnimon        Vaccine        Mega           	Devidramon     Virus          Champion       	
+Omnimon        Vaccine        Mega           	Gekomon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Gesomon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Guardromon     Virus          Champion       	
+Omnimon        Vaccine        Mega           	Numemon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Octomon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	PSukamon       Virus          Champion       	
+Omnimon        Vaccine        Mega           	Raremon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Sukamon        Virus          Champion       	
+Omnimon        Vaccine        Mega           	Tuskmon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Cyclonemon     Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Darkrizamon    Virus          Champion       	
+WarGreymon     Vaccine        Mega           	DTyrannomon    Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Deltamon       Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Devidramon     Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Gekomon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Gesomon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Guardromon     Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Numemon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Octomon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	PSukamon       Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Raremon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Sukamon        Virus          Champion       	
+WarGreymon     Vaccine        Mega           	Tuskmon        Virus          Champion       	
+
+Digimon             Type                Level               
+-----------------------------------------------
+Greymon             Vaccine             Champion            
+  +Agumon                                                   
+MTyrannomon         Vaccine             Ultimate            
+  +Tuskmon                                                  
+MetalGreymon        Vaccine             Ultimate            
+  +Greymon                                                  
+    +Agumon                                                 
+Omnimon             Vaccine             Mega                
+WarGreymon          Vaccine             Mega                
+  +MTyrannomon                                              
+    +Tuskmon                                                
+  +MetalGreymon                                             
+    +Greymon                                                
+      +Agumon                                               
+Cyclonemon          Virus               Champion            
+  +Gizamon                                                  
+Darkrizamon         Virus               Champion            
+DTyrannomon         Virus               Champion            
+  +Betamon                                                  
+Deltamon            Virus               Champion            
+Devidramon          Virus               Champion            
+Tuskmon             Virus               Champion            
+Extyrannomon        Virus               Ultimate            
+  +Darkrizamon                                              
+  +DTyrannomon                                              
+    +Betamon                                                
+Gigadramon          Virus               Ultimate            
+  +Devidramon                                               
+Megadramon          Virus               Ultimate            
+  +Cyclonemon                                               
+    +Gizamon                                                
+  +Deltamon                                                 
+MTyrannomon         Virus               Ultimate            
+SkullGreymon        Virus               Ultimate            
+Machinedramon       Virus               Mega                
+  +SkullGreymon                                             
+
+Digimon             Type                Level               DP                  
+---------------------------------------------------------------
+MetalGreymon        Vaccine             Ultimate            0                   
+  +WarGreymon       Vaccine             Mega                0                   
+  +Omnimon          Vaccine             Mega                20                  
+MTyrannomon         Vaccine             Ultimate            6                   
+  +WarGreymon       Vaccine             Mega                0                   
+SkullGreymon        Virus               Ultimate            9                   
+  +Machinedramon    Virus               Mega                0                   
+

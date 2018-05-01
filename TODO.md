@@ -1,4 +1,4 @@
 ## TODO
+* Add "skill by name"
 * Add stages where digimon can be captured
-* Add skills
 * Divide TODO in categories

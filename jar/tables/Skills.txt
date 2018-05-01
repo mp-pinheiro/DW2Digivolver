@@ -1,0 +1,698 @@
+Air Attack&Champion&Nature&Attack&One Enemy&8&200
+Shoots an Air Burst&Unimon
+-
+Alias Fake&Mega&None&Assist&Self&26&00
+Make clone to avoid attack&???
+Enemy has a higher chance of missing you
+-
+Alien Ray&Ultimate&Machine&Attack&One Enemy&20&375
+Fires a Ray Beam&Vademon
+-
+Anti-Confusion&Champion&None&Assist&One Ally&12&00
+Cures Confusion&Saberdramon
+-
+Anti-Dote&Champion&None&Assist&One Ally&10&00
+Cures Poison&Gururumon
+-
+Anti-Freeze&Champion&None&Assist&One Ally&12&00
+Cures Paralysis&ShimaUnimon
+-
+Armor Aid&Mega&None&Assist&Self&20&00
+Strengthens your Armor&???
+Boosts your defense by 20%
+-
+Armor Coating&Champion&None&Assist&One Ally&10&00
+Boost Digimon attack power&MudFrigimon
+Boosts one ally Digimon attack by 20%
+-
+Banana Slip&Mega&None&Assist&All Enemies&60&00
+Trips all resting enemies&MetalEtemon
+Causes all countering digimon to lose turn
+-
+Beast King Fist&Champion&None&Counter&One Enemy&12&150
+Damage return on Counter&Leomon
+Counter returns damage dealt 1.5x, floored (rounded down)
+-
+Big Bang Boom&Ultimate&Machine&Attack&All Enemies&40&300
+Throws Grenades at all foe&Giromon
+-
+BlackPearl Shot&Rookie&None&Attack&One Enemy&4&200
+Attacks with no defense&Syakomon
+-
+Blaze Blast&Champion&Fire&Attack&One Enemy&10&250
+Shoots a Breath of Fire&Tyrannomon
+-
+Blaze Buster&Champion&Fire&Assist&One Ally&10&00
+Add Flame FX to attack&Flarerizamon
+Changes all moves used by the Digimon to Fire
+-
+Blind Attack&Mega&None&Attack&All&30&600
+Attacks friend and foe&???
+Randomly attacks one digimon, friend or enemy
+-
+Blue Blaster&Rookie&Fire&Attack&One Enemy&4&100
+Shoots a FIreball&Gabumon
+-
+Bolt Strike&Rookie&Water&Attack&One Enemy&6&100
+Fires a Frozen Missile&SnowGoburimon
+-
+Boom Bubble&Rookie&Nature&Attack&One Enemy&6&125
+Shoots a Boom Bubble&Patamon
+-
+Brown Stinger&Champion&Nature&Attack&One Enemy&12&200
+Shoots Poison Needles&Flymon
+-
+Buffalo Breath&Champion&Darkness&Counter&One Enemy&10&225
+Confuses foe in Counter&Raremon
+-
+Chaos Cannon&Mega&Machine&Attack&Random Enemy&40&250
+Allows repeated attacks&???
+Allows multiple hits if the previous hit knocks out an opponent
+-
+Chrono Breaker&Champion&Machine&Interrupt&One Enemy&14&200
+Delays foe's attack to end&Clockmon
+-
+Concert Crush&Ultimate&None&Attack&One Enemy&18&275
+Foe can't use Power Techs&Etemon
+-
+Coral Crusher&Champion&Water&Attack&One Enemy&12&200
+Slows enemy down&Gesomon
+Lowers speed by 20%
+-
+Crimson Claw&Champion&Darkness&Attack&One Enemy&18&350
+Confuse, Poison + Stun foe&Devidramon
+If you have one of these statuses, then the skill will transfer that status to your enemy
+-
+Crimson Flame&Mega&None&Assist&One Ally&50&00
+Full HP revival&Phoenixmon
+Restores one digimon to full health, even if dead
+-
+Critical Blow&Mega&None&Attack&One Enemy&26&200
+Final Blow to weakened foe&???
+Will only deal damage if it will defeat them (It is at least 20 AP)
+-
+Dark Shot&Ultimate&Machine&Attack&Random Enemy&20&400
+Fires an Organic Missle&SkullGreymon
+-
+Darkness Gear&Rookie&Machine&Attack&One Enemy&8&175
+Fires a Darkness Gear&Hagurumon
+-
+Darkness Ray&Champion&Darkness&Assist&One Ally&10&00
+Learn Dark Power attacks&Darkrizamon
+Changes all moves used by the Digimon to Darkness
+-
+Darkside Attack&Ultimate&Machine&Attack&One Enemy&20&325
+Foes can't recover HP&Megadramon
+-
+Defensive Ray&Champion&None&Assist&One Ally&10&00
+Boost your Defense Power&Icemon
+Boosts one ally digimon defense by 20%
+-
+Demi Dart&Rookie&Darkness&Attack&One Enemy&8&150
+Lowers enemy MP a little&DemiDevimon
+-
+Destabilizer Ray&Mega&None&Attack&All Enemies&36&00
+Lower DefPower of all foe&???
+Lowers defense of all enemy Digimon by 20%
+-
+Digital Bomb&Ultimate&Machine&Attack&All Enemies&30&225
+Toss sm Bombs on all foes&Datamon
+-
+Duo ScissorClaw&Ultimate&None&Attack&All Enemies&36&225
+Lowers all foes Def Power&Okuwamon
+Lower's target digimon's defense by ~20% (before applying damage itself)
+-
+Electric Shock&Rookie&Nature&Attack&One Enemy&8&175
+Fires an Electric Burst&Betamon
+-
+Electro Thread&Rookie&Nature&Attack&One Enemy&8&175
+Shoots Electro Threads&Kunemon
+-
+Electro-Shocker&Champion&Nature&Interrupt&One Enemy&12&225
+Lower Power of foe attack&Kabuterimon
+Lower's the attack stat of target digimon by 20%
+-
+Energetic Bomb&Ultimate&Machine&Counter&One Enemy&20&300
+CounterAttack hits all foes&MetalMamemon
+When countering, all foes are hit instead of just one
+-
+Energy Blast&Mega&Machine&Attack&All Enemies&60&375
+Shoot Energy Blasts at foe&MSeadramon
+-
+Energy Blast (Boss)&Mega&None&Attack&One Enemy&40&600
+Fires an Energy Blast&???
+-
+E-Stun Blast&Rookie&Darkness&Attack&One Enemy&8&150
+Stuns foe with a Blast&Gazimon
+May paralyze
+-
+Evil Charm&Champion&Darkness&Attack&One Enemy&12&200
+Fade-away Spell confusion&Bakemon
+Can confuse
+-
+Evil Touch&Champion&Darkness&Attack&One Enemy&12&225
+Lowers enemy's MP&Devimon
+-
+Evil Wind&Ultimate&Water&Attack&All Enemies&36&200
+Slows enemy down&MarineDevimon
+Reduces speed by 20%
+-
+Fantasmic Bomb&Mega&Fire&Attack&All Enemies&84&425
+Attack wave on all enemies&???
+-
+Fantasmic Ray&Mega&Machine&Attack&All Enemies&90&450
+Attack wave on all enemies&???
+-
+Fire Blast&Champion&Fire&Attack&All Enemies&22&175
+Shoots Flame at all foes&DTyrannomon
+-
+Fire Blast II&Ultimate&Machine&Attack&One Enemy&20&375
+Fires an Organic Missile&MTyrannomon
+-
+Fire Tornado&Mega&None&Attack&All Enemies&80&450
+Shoots Energy at all foes&Magnadramon
+-
+Fireball&Champion&Fire&Attack&One Enemy&12&300
+Shoots a Fire Punch&Meramon
+-
+Fist of Fate&Champion&None&Attack&One Enemy&10&275
+Throws a Light-Speed Punch&Angemon
+-
+Flame Bomber&Rookie&Fire&Attack&One Enemy&6&150
+Shoots a Fireball&Candlemon
+-
+Flaming Rocket&Champion&Fire&Attack&One Enemy&12&300
+Shoots a Blazing Missile&Flamedramon
+-
+Flower Cannon&Ultimate&Nature&Attack&One Enemy&16&350
+Fires Flower Energy Blast&Lillymon
+-
+Fossil Bite&Champion&None&Attack&One Enemy&8&200
+Attacks with Claws&Coelamon
+-
+Freeze Breath&Mega&Water&Attack&All Enemies&60&375
+Frozen Breath hits all foe&MGarurumon
+-
+Friendly Fire&Rookie&Fire&Attack&One Ally&4&175
+Enemies attack themselves&Tsukaimon
+Allows you to attack an ally in order to trigger various moves
+-
+Full HP Cure&Mega&None&Assist&All Allies&80&00
+Digimon full HP recovery&Seraphimon
+Fully recovers all ally digimon in battle
+-
+Full Recovery&Ultimate&None&Assist&One Ally&18&00
+Fully regain Digimon's HP&Panjyamon
+Restores one digimon to full HP (does not revive)
+-
+Fungus Cruncher&Rookie&None&Assist&Self&8&00
+Poisons foe during attacked&Mushroomon
+Makes yourself poisonous, causing poison to any attacking digimon
+-
+GAIA Gear&Mega&None&Counter&One Enemy&48&675
+Good only in CounterAttack&???
+If the counter is not triggered, the move will automatically miss
+-
+Garuru Cannon&Mega&Machine&Attack&All Enemies&80&450
+Fires Missiles at all foes&???
+Only found on wild, high-level Omnimons in Tera Domain
+-
+Giga Blaster&Ultimate&Machine&Attack&One Enemy&18&375
+Fires an Organic Missile&MetalGreymon
+-
+Giga Byte Wing&Ultimate&Machine&Attack&One Enemy&20&325
+Foes can't regain Status&Gigadramon
+-
+Giga Cannon&Mega&Machine&Attack&Random Enemy&60&300
+Attacks till MP runs out&Machinedramon
+-
+GigaScissorClaw&Mega&Nature&Interrupt&One Enemy&40&300
+Disables enemy attack&HKabuterimon
+-
+Grisly Wing&Ultimate&Darkness&Attack&All Enemies&40&300
+Attack fow w/ Flying Bats&Myotismon
+-
+Hail Storm&Rookie&Water&Attack&One Enemy&8&175
+Attacks with a Hail Storm&SnowAgumon
+-
+Harpoon Torpedo&Champion&Machine&Attack&One Enemy&10&250
+Shoots a Horn Missile&Ikkakumon
+-
+Heart Break Hit&Ultimate&None&Assist&All&36&00
+Weakens all Data Digimon&WaruMonzaemon
+Reduces attack and defense by 20% of all Data digimon
+-
+Heaven's Arrow&Ultimate&None&Attack&One Enemy&16&350
+Shoots a Light-Speed Arrow&Angewomon
+-
+Horn Buster&Ultimate&None&Interrupt&One Enemy&20&325
+Lowers Off Power greatly&MKabuterimon
+-
+Howling Blaster&Champion&Fire&Attack&One Enemy&12&275
+Shoots Blue Flame&Garurumon
+-
+Howling Crusher&Mega&None&Attack&One Enemy&30&450
+No Counter, Claw attack&SaberLeomon
+-
+HP Recovery&Ultimate&None&Assist&All Allies&24&00
+Recover 150 HP All&MagnaAngemon
+Heals each ally digimon in battle for 150 HP
+-
+HP Zapper&Mega&None&Attack&One Enemy&36&00
+Lowers enemy HP by half&???
+Does damage equal to the amount of HP the target has remaining divided by 2 (rounded down) (diminishing returns)
+-
+Hung on Death&Mega&None&Assist&One Ally&20&00
+Revive Zombied Digimon&Jijimon
+Removes Zombie status from an ally Digimon
+-
+Hydro Blaster&Champion&Water&Attack&One Enemy&10&250
+Shoots High Pressure Water&Shellmon
+-
+Hyper Cannon&Champion&Machine&Attack&One Enemy&10&250
+Fires a Cannon&Tankmon
+-
+Hyper Flashing&Ultimate&None&Assist&All&36&00
+Weakens all Vaccine Digimon&Digitamamon
+Lowers attack and defense by 20% for all Vaccine Digimon in battle
+-
+Hyper Heat&Champion&Fire&Attack&One Enemy&10&225
+Shoots a Super Hot Blast&Cyclonemon
+-
+Ice Blast&Champion&Water&Attack&All Enemies&18&150
+Shoot IceBlades at all foe&Seadramon
+-
+Icicle Shot&Champion&Water&Attack&One Enemy&10&250
+Shoots an Icicle at foes&Mojyamon
+-
+Inferno Missile&Mega&Machine&Attack&All Enemies&80&450
+Fires Missiles at all foes&Diaboromon
+-
+Invincibility&Ultimate&None&Assist&One Ally&20&00
+Your Digimon is unbeatable&Meteormon
+Nullifies all attacks against a single ally Digimon
+-
+Invisibility&Rookie&None&Assist&Self&8&00
+Excludes from enemy attack&Dokunemon
+Enemy does not target you
+-
+Iron Drill Spin&Champion&Machine&Attack&One Enemy&10&250
+Attacks with an Iron Drill&Drimogemon
+-
+Junk Chunker&Ultimate&Darkness&Attack&One Enemy&12&300
+Shoots Poop at enemies&Garbagemon
+-
+Karate Sweep&Mega&None&Attack&All Enemies&80&450
+Karate Chops all enemies&???
+-
+Kongou&Mega&None&Assist&Self&16&00
+Unbeatable during own turn&Baihumon
+Voids all damage against self
+-
+Left Hand&Mega&None&Attack&One Enemy&36&550
+Gives foes a Bakhand Slap&???
+-
+Legendary Blade&Mega&None&Attack&All Enemies&70&400
+Sonic attack on all foes&Gryphonmon
+-
+Life Shield&Rookie&None&Interrupt&One Enemy&6&00
+Defend Digimon in attack&Goburimon
+Lowers tech power
+-
+Light Gun&Mega&None&Attack&One Enemy&60&700
+Shoots stored Light Energy&???
+-
+Lightning Blade&Ultimate&None&Attack&All Enemies&24&200
+Lightning Blade hits all foes&Andromon
+-
+Lightning Blast&Ultimate&Nature&Attack&One Enemy&20&400
+Fires an Electric Burst&Raidramon
+-
+Lightning Paw&Champion&None&Attack&One Enemy&10&250
+Attacks with Claws&Gatomon
+-
+Lightning Spear&Ultimate&Nature&Attack&One Enemy&16&350
+Fires a Lightning Bolt&MegaSeadramon
+-
+Magical Tail&Ultimate&None&Attack&One Enemy&18&375
+Throws a Spear&Piximon
+-
+Marching Fishes&Rookie&Water&Attack&One Enemy&6&150
+Small Fish Storm attack&Gomamon
+-
+Mech Ray&Champion&Machine&Assist&One Ally&10&00
+Gives you Mech FX powers&NDrimogemon
+Changes all moves used by the Digimon to Machine
+-
+Mega Bone Stick&Champion&None&Attack&All Enemies&14&125
+Attacks all foes w/ needles&Apemon
+-
+Mega Fire&Mega&None&Attack&All Enemies&84&425
+Energy Blasts all foes&Idramon
+-
+Mega Heal&Champion&None&Assist&One Ally&12&00
+Recover your Digimon's HP&Piddomon
+Heals one ally Digimon for 150 HP
+-
+Metal Fireball&Ultimate&Machine&Attack&All Enemies&32&250
+Shoot Hot Metal on all foe&SkullMeramon
+-
+Meteor Stream&Champion&Fire&Counter&One Enemy&12&200
+Hit all foes on Counter&Starmon
+-
+Meteor Wing&Champion&Fire&Attack&All Enemies&18&150
+Fire Wings attack all foes&Birdramon
+-
+MP Destroyer&Ultimate&None&Interrupt&One Enemy&12&00
+Weakens foe attack, gain MP&Tekkamon
+Absorbs MP used by opponent and lowers tech power
+-
+MP Magic&Ultimate&None&Interrupt&One Enemy&4&00
+Recovers MP used for Tech&BlueMeramon
+Absorbs MP used by opponent
+-
+Musical Fist&Ultimate&None&Attack&Random Enemy&12&375
+Foes may recover with this&ShogunGekomon
+Attack will heal opponent when you are Vaccine attacking Data, Data attacking Virus, and Virus attacking Vaccine
+-
+Nature Hit Ray&Champion&Nature&Assist&One Ally&10&00
+Add Nature FX on Digimon&MoriShellmon
+Changes all moves used by the Digimon to Nature
+-
+Necro Magic&Champion&None&Assist&Random Enemy&0&00
+Sucks MP of Stunned Digimon&Soulmon
+Will receive a lot more MP back than simply guarding; Only works on defeated Digimon; Can get MP out of the same Digimon up to 3 times
+-
+Needle Spray&Champion&Nature&Counter&One Enemy&10&225
+Counter Attack with Poison&Togemon
+-
+Needle Squall&Mega&Machine&Attack&All Enemies&80&425
+Shoots Spines at all foes&Pukumon
+-
+Ninja Flower&Ultimate&Nature&Attack&All Enemies&30&250
+Shoots Flower Shurikens&Blossomon
+-
+NinjaKnifeThrow&Champion&None&Counter&One Enemy&10&225
+Raises CounterAttack power&Ninjamon
+Counter multiplies total damage by 15x
+-
+Nova Blast&Champion&Fire&Attack&One Enemy&12&275
+Attacks with a Fire Blast&Greymon
+-
+Ocean Love&Mega&None&Attack&Random Enemy&30&350
+Disables foe's strong techs&MarineAngemon
+-
+Panic Wave&Champion&None&Assist&One Ally&10&00
+Confuses foe during attack&PSukamon
+Addes confusion to an ally's attack
+-
+Parameter Patch&Champion&None&Assist&One Ally&12&00
+Recovers Digimon's Parameters&JMojyamon
+Removes any ailments, except death, from one Digimon
+-
+Party Time&Champion&Darkness&Attack&One Enemy&10&200
+Boosts Power if Poisoned&Nanimon
+Increases attack power by 1.5x if you are poisoned
+-
+Party Time&Champion&Darkness&Attack&One Enemy&10&200
+Boosts Power if Poisoned&Numemon
+Increases attack power by 1.5x if you are poisoned
+-
+Party Time&Champion&Darkness&Attack&One Enemy&10&200
+Boosts Power if Poisoned&Sukamon
+Increases attack power by 1.5x if you are poisoned
+-
+Party Time&Champion&Darkness&Attack&One Enemy&10&200
+Boosts Power if Poisoned&Vegiemon
+Increases attack power by 1.5x if you are poisoned
+-
+Pepper Breath&Rookie&Fire&Attack&One Enemy&8&175
+Shoots a Fireball&Agumon
+-
+Pit Pelter&Ultimate&Nature&Attack&All Enemies&40&275
+Shoots Pits at all enemies&Cherrymon
+-
+Poison Ivy&Rookie&Nature&Attack&One Enemy&8&150
+Poisons foe w/ Poison Ivy&Palmon
+Can poison target digimon
+-
+Poison Wave&Ultimate&None&Assist&One Ally&26&00
+Gives you Poison FX powers&WaruSeadramon
+Addes poison to an ally's attack
+-
+Poison Wing&Mega&Fire&Attack&One Enemy&40&600
+Shoots a Heat Blast&Kimeramon
+-
+Pretty Attack&Ultimate&None&Attack&One Enemy&20&300
+Disables foe's strong techs&ExTyrannomon
+-
+Protect Grenade&Champion&Machine&Attack&One Enemy&12&200
+Fires a Homing Missile&Guardromon
+-
+Pulse Blast&Champion&None&Attack&One Enemy&12&200
+Lowers foe's Offense Power&Dolphmon
+Reduces opponent's current attack stat by 20%
+-
+Pummel Peck&Champion&Machine&Attack&One Enemy&10&250
+Sends a Mini-Kiwimon&Kiwimon
+-
+Pummel Whack&Champion&None&Counter&One Enemy&20&300
+Use foe's MP for Counter&Ogremon
+When countering, you lose the MP of the move that hit you
+-
+Puppet Pummel&Mega&Machine&Attack&One Enemy&32&500
+Explosive Hammer Attack&Puppetmon
+-
+Rail Cannon&Mega&Machine&Attack&One Enemy&40&675
+Pwr Attack at end of turn&???
+Attacks last
+-
+Rain of Pollen&Rookie&Nature&Attack&One Enemy&6&150
+Covers enemy with Pollen&Floramon
+-
+Recovery Power&Ultimate&None&Assist&All Allies&36&00
+Cures Mix-up, Poison, Stun&Tinmon
+Cures confusion, poison, and stun on all allied Digimon
+-
+Reduction Ray&Mega&None&Assist&One Enemy&12&00
+Lowers foe's attack power&???
+Lowers target's attack by 20%
+-
+Re-Format&Ultimate&None&Assist&All Enemies&40&00
+Reset all foe's Parameters&Vermilimon
+Removes all status changes on all opponents, including attack power increases
+-
+Re-Initialize&Champion&None&Assist&One Enemy&12&00
+Resets foes's 1st parameters&Hyogamon
+Resets the status of one opponent, including increased attack power
+-
+Reset Status&Mega&None&Assist&Self&32&00
+Resets all Parameters&???
+Removes all status changes, including boosts
+-
+Right Hand&Mega&None&Attack&One Enemy&30&475
+Gives foes a Backhand Slap&???
+-
+Rock Fist&Rookie&None&Attack&One Enemy&8&200
+Shoots Rock at enemy&Gotsumon
+-
+Rose Spear&Mega&Nature&Attack&All Enemies&60&350
+Hosomi Punch all enemies&Rosemon
+-
+RottenRainballs&Champion&None&Assist&One Ally&8&00
+Add Poison FX to attack&RedVegiemon
+Causes one ally digimon to poison opponents when attacking
+-
+Royal Smasher&Ultimate&Nature&Attack&One Enemy&14&325
+Shoots Egg at enemies&Deramon
+-
+Sad Water Blast&Mega&Water&Attack&All Enemies&80&450
+Hit all foe with Sad Water&Preciomon
+-
+Safety Sphere&Mega&None&Assist&Self&18&00
+Boosts Hide and Def Powers&???
+Boosts defense by 20% and less likely to be targeted by enemies
+-
+S-Bone Crusher&Mega&None&Attack&All Enemies&70&400
+Spinning Bone hits all foe&SMammothmon
+-
+Scissor Claw&Champion&None&Attack&One Enemy&12&225
+Lowers foe's Defense Power&Kuwagamon
+Reduces opponent's current defense stat by ~20% before damage applied
+-
+Scissor Magic&Rookie&None&Attack&One Enemy&6&150
+A Scissors attack&Crabmon
+-
+Shadow Scythe&Ultimate&Darkness&Attack&One Enemy&20&375
+Re-attack if foe's stunned&Phantomon
+Attacks again if the target is defeated
+-
+Slamming Tusk&Champion&None&Attack&One Enemy&12&225
+Throws a Quick Punch&Tuskmon
+-
+Small HP Cure&Rookie&None&Assist&One Ally&6&00
+Digimon small HP recovery&ClearAgumon
+Heals 50 HP to one ally digimon
+-
+Smiley Bomb&Ultimate&Machine&Counter&One Enemy&16&325
+Counter Attack hit harder&Mamemon
+Counter multiplies damage by 1.5x and subtracts 10
+-
+Smiley Warhead&Mega&Machine&Counter&One Enemy&40&400
+Counter Attack all foes&PMamemon
+When countering, Attack Power becomes 60 and All Enemies are hit
+-
+Solar Ray&Champion&Machine&Attack&One Enemy&8&200
+Fires an Energy Burst&Centarumon
+-
+Sonic Crusher&Champion&None&Attack&One Enemy&12&200
+Sonic Blow can confuse foe&Gekomon
+Can confuse
+-
+Spinning Needle&Champion&Nature&Attack&One Enemy&10&225
+Hits resting enemy harder&Airdramon
+Increases attack power by 1.5x against countering enemies
+-
+Spiral Saw&Rookie&None&Attack&One Enemy&8&175
+Attacks with Back Fin&Gizamon
+-
+Spiral Twister&Rookie&Fire&Attack&One Enemy&6&125
+Shoots a Fireball&Biyomon
+-
+Spurting Ink&Champion&Water&Attack&One Enemy&10&250
+Fires Black Ink Shots&Octomon
+-
+S-Thunder Smack&Rookie&Nature&Attack&Random Enemy&6&175
+Hits foe w/ Lightning Bolt&Elecmon
+-
+Strong Carapace&Champion&None&Attack&All Enemies&12&100
+Shoots Horns at all foes&Tortomon
+-
+Stun Bubble&Rookie&Water&Attack&One Enemy&8&150
+Confuses foes with Bubbles&Otamamon
+-
+Stun Flame Shot&Champion&Fire&Attack&One Enemy&12&200
+Stun foe with a Flame&Kokatorimon
+-
+Stun Punch&Mega&None&Counter&One Enemy&44&575
+Counter Attack stuns foe&???
+-
+Stun Ray&Champion&None&Assist&One Ally&10&00
+Adds Stun Effect to attack&SandYanmamon
+Causes attacks to stun opponent Digimon
+-
+SubzeroIcePunch&Champion&Water&Attack&One Enemy&10&250
+Power-Up with repeated use&Frigimon
+Each successive attack adds 25 
+-
+Super Shocker&Rookie&Nature&Attack&Random Enemy&6&125
+Shoot Static Elec at foes&Tentomon
+-
+Super Slap&Rookie&None&Attack&One Enemy&6&150
+Slaps an enemy&Penguinmon
+-
+Tail Blade&Ultimate&None&Counter&One Enemy&18&300
+Avoid attack while resting&Scorpiomon
+Opponents targeting you will have a higher chance of missing
+-
+Tentacle Claw&Ultimate&None&Attack&One Enemy&16&275
+Throws a 3 Point Spear&Dragomon
+-
+Terra Force&Mega&None&Attack&One Enemy&40&600
+Fires Powerful Energy Shots&WarGreymon
+-
+Thunder Ball&Champion&Nature&Counter&Random Enemy&10&225
+Stun foe in Counter Aattack&Wizardmon
+-
+Thunder Ray&Champion&Nature&Attack&One Enemy&10&250
+Fires a Thunder Bolt&Yanmamon
+-
+Tidal Wave&Ultimate&Water&Attack&All Enemies&36&200
+Lowers all foe's Off Power&Whamon
+20% reduction to opponent's current attack stat
+-
+Titan Laser&Mega&Machine&Attack&All Enemies&90&475
+Shoots Laser at all foes&???
+Note: It appears to add 2 damage against neutral targets
+-
+Tomahawk Crunch&Mega&Machine&Attack&All Enemies&60&375
+Throws Axes at all enemies&Boltmon
+-
+Toy Flame&Rookie&None&Attack&One Enemy&6&150
+Shoots Flame Blocks&ToyAgumon
+-
+Transcend Sword&Mega&None&Attack&One Enemy&38&500
+Powerful on resting enemy&Omnimon
+Attack Power increased by 1.5x against an enemy waiting to counter and can paralyze
+-
+Trick or Treat&Ultimate&Nature&Attack&All Enemies&30&300
+Hit all foe w/ no defense&Pumpkinmon
+User has their defense reduced to 0
+-
+Tri-Horn Attack&Ultimate&None&Attack&One Enemy&16&350
+Attacks with a Horn&Triceramon
+-
+Triple Forces&Champion&Darkness&Attack&All Enemies&18&150
+Energy Bursts at all foe&Deltamon
+-
+Trump Sword&Mega&None&Attack&One Enemy&30&450
+Unstoppable sword throw&Pierrotmon
+-
+Tubular Attack&Mega&None&Counter&One Enemy&56&475
+CounterAttack hits all foe&???
+-
+Tusk Crusher&Ultimate&None&Attack&One Enemy&18&325
+Crushes all foes caught&Mammothmon
+-
+Twig Tap&Champion&Nature&Attack&One Enemy&12&200
+Drains enemy HP&Woodmon
+-
+Vee Head Butt&Rookie&None&Attack&One Enemy&8&200
+A Head Butt attack&Veemon
+-
+Venom Infusion&Mega&None&Interrupt&One Enemy&40&00
+Stuns enemy with fear&VMyotismon
+Prevents enemy from attacking
+-
+Virus Attack&Ultimate&None&Assist&All&36&00
+Weakens all Virus Digimon&Monzaemon
+Reduces Attack and Defense 20% of all Virus Digimon in battle
+-
+V-Nova Blast&Champion&None&Attack&One Enemy&10&225
+Hit foes about to Counter&Veedramon
+Attack Power increased by 1.5x against an enemy waiting to counter
+-
+Volcanic Strike&Champion&Fire&Attack&One Enemy&12&300
+Shoots Fireballs&Monochromon
+-
+Vulcan's Hammer&Ultimate&None&Attack&All Enemies&28&225
+Hits all foe with a hammer&Zudomon
+-
+V-Wing Blade&Ultimate&None&Attack&One Enemy&16&325
+Hits resting enemies harder&AeroVeedramon
+Increases attack power by 1.5x against countering enenmies
+-
+Waking Dream&Rookie&Darkness&Attack&One Enemy&4&100
+Nightmare attacks a foe&Tapirmon
+-
+Water Ray&Champion&Water&Assist&One Ally&10&00
+Adds Water FX to attack&IceDevimon
+Changes all moves used by the Digimon to Water
+-
+Wing Blade&Ultimate&Nature&Interrupt&One Enemy&20&350
+Fires a Vaccum Blade&Garudamon
+-
+Wolf Claw&Ultimate&None&Attack&One Enemy&16&350
+Attacks with claws&WereGarurumon
+-
+X-Scissor Claw&Mega&None&Attack&One Enemy&40&550
+Attacks with a claw&GranKuwagamon
+-
+Zen Recovery&Ultimate&None&Assist&All Allies&40&00
+Full Parameter recovery&MTyrannomon
+Restores Digimon's status to normal
+-
+Zip Boom&Champion&None&Assist&One Ally&12&00
+Boosts Digimon's Speed&Akatorimon
+Boosts one ally Digimon speed by 20%
+-
